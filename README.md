@@ -1,7 +1,6 @@
 # Predictive Maintenance of Aircraft Engines — Deployment
 
-Deployment work for the VLBA / System Architectures project (MLOps-based Data
-Science Process Model). Estimates the Remaining Useful Life (RUL) of turbofan
+Deployment work for the MLOps-based DataScience Process Model. Estimates the Remaining Useful Life (RUL) of turbofan
 engines and serves predictions through a dashboard.
 
 ## Structure
