@@ -19,6 +19,14 @@ set, so it works with no backend yet. Features:
 
 Open `deployment/dashboard/index.html` in a browser to run it.
 
+## Live dashboard
+
+**https://aircraft-rul.netlify.app/**
+
+A working fleet health monitor running on sample data from the test set.
+The trained model is wired in at the backend stage; predictions currently
+route through a mock function (`predictRUL()`) designed as a single swap point.
+
 ## Model integration
 
 All predictions route through one function, `predictRUL()`, in
