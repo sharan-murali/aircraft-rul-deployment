@@ -8,12 +8,6 @@ The trained model is wired in later by swapping one function.
 - `index.html`  — the whole app (layout, styles, logic)
 - `fleet-data.js` — real sample rows: engine id, recorded life, true RUL, sensor trajectory
 
-## Run it
-Just open `index.html` in any browser (needs internet for the Chart.js CDN).
-Or serve locally:
-    python3 -m http.server 8000
-then visit http://localhost:8000
-
 ## Features
 - Monitoring strip (predictions served, latency, healthy/critical counts) — always on
 - Operations: fleet replay (press Play to age the engines) + click any engine for detail
