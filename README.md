@@ -9,11 +9,12 @@ engines and serves predictions through a dashboard.
       dashboard/    Frontend: fleet health monitor (HTML/JS + Chart.js)
       backend/      FastAPI prediction service (in progress)
 
-      ## Live dashboard
+## Live dashboard
 
-**https://aircraft-rul.netlify.app/**
+ **https://aircraft-rul.netlify.app/**
+ 
 
-      ## Project status
+## Project status
 
 **Deployment is ongoing.** The current focus is the monitoring dashboard, which
 is functional and deployed. It runs on fixed sample data drawn from the real
@@ -46,7 +47,7 @@ set, so it works with no backend yet. Features:
 - Operations: fleet replay + click-through engine detail
 - Test bench: manual predict + synthetic stream (labelled simulated)
   
-- ## Design overview
+## Design overview
 See [docs/deployment-dashboard-overview.pdf] for a walkthrough of each dashboard section and its purpose.
 
 ## Model integration
