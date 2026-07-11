@@ -50,15 +50,4 @@ set, so it works with no backend yet. Features:
 ## Design overview
 See [docs/deployment-dashboard-overview.pdf] for a walkthrough of each dashboard section and its purpose.
 
-## Model integration
 
-All predictions route through one function, `predictRUL()`, in
-`dashboard/index.html`. It is currently a mock using recorded test data; at
-deployment it is pointed at the backend `/predict` endpoint. Return shape stays
-`{ rul, status }`.
-
-## Status
-- [x] Dashboard frontend (mock data)
-- [ ] FastAPI backend
-- [ ] Containerization (Docker)
-- [ ] Cloud deployment
