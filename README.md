@@ -16,7 +16,7 @@ set, so it works with no backend yet. Features:
 - Monitoring strip: predictions served, latency, healthy/critical counts
 - Operations: fleet replay + click-through engine detail
 - Test bench: manual predict + synthetic stream (labelled simulated)
-- 
+  
 - ## Design overview
 See [docs/deployment-dashboard-overview.pdf] for a walkthrough of each dashboard section and its purpose.
 
