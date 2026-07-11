@@ -17,8 +17,6 @@ set, so it works with no backend yet. Features:
 - Operations: fleet replay + click-through engine detail
 - Test bench: manual predict + synthetic stream (labelled simulated)
 
-Open `deployment/dashboard/index.html` in a browser to run it.
-
 ## Live dashboard
 
 **https://aircraft-rul.netlify.app/**
