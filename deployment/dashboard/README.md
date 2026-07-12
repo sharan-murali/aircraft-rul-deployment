@@ -1,26 +1,49 @@
-# Engine Fleet Health Monitor — frontend (mock-data build)
+# Predictive Maintenance of Aircraft Engines — Deployment
 
-A single-page dashboard for the predictive-maintenance project. Runs entirely on
-fixed sample data drawn from the real test set, so it works with no backend yet.
-The trained model is wired in later by swapping one function.
+Deployment work for the MLOps-based DataScience Process Model. Estimates the Remaining Useful Life (RUL) of turbofan
+engines and serves predictions through a dashboard.
 
-## Files
-- `index.html`  — the whole app (layout, styles, logic)
-- `fleet-data.js` — real sample rows: engine id, recorded life, true RUL, sensor trajectory
+## Structure
 
-## Features
-- Monitoring strip (predictions served, latency, healthy/critical counts) — always on
-- Operations: fleet replay (press Play to age the engines) + click any engine for detail
-- Test bench: manual predict + synthetic stream (clearly labelled simulated)
+    deployment/
+      dashboard/    Frontend: fleet health monitor (HTML/JS + Chart.js)
+      backend/      FastAPI prediction service (in progress)
 
-## Wiring in the real model later
-Everything routes through one function, `predictRUL()`, near the top of the
-script in `index.html`. Right now it's a mock that uses each engine's true RUL.
-At deployment, replace its body with a `fetch()` call to the FastAPI `/predict`
-endpoint. The return shape must stay the same: `{ rul, status }`.
-A commented template for the real version sits directly below the mock.
+## Live dashboard
 
-## Note for the report
-The fleet/detail views REPLAY recorded test engines (not a live feed); the
-synthetic stream is clearly labelled simulated. Manual predict is genuine live
-inference once the backend is connected.
+ **https://aircraft-rul.netlify.app/**
+ 
+
+## Project status
+
+**Deployment is ongoing.** The current focus is the monitoring dashboard, which
+is functional and deployed. It runs on fixed sample data drawn from the real
+test set, so the interface and all interactions work end to end.
+
+The trained model is not yet connected. All predictions route through a single
+function, `predictRUL()`, which is currently a mock. This is a deliberate design
+choice: the frontend was built and polished first, and the model is wired in by
+replacing that one function with a call to the prediction API — nothing else
+changes.
+
+### Done
+- [x] Monitoring dashboard (fleet replay, engine detail, manual predict, synthetic stream)
+- [x] Deployed and publicly accessible
+
+### In progress
+- [ ] FastAPI backend serving the trained model
+- [ ] Connect dashboard to live predictions
+- [ ] Containerization and cloud deployment
+
+### Possible extensions
+The scope may grow as the deployment matures — additional monitoring,
+retraining triggers, and drift detection are under consideration.
+
+## Dashboard (current state)
+
+A single-page dashboard running on fixed sample data drawn from the real test
+set, so it works with no backend yet. Features:
+- Monitoring strip: predictions served, latency, healthy/critical counts
+- Operations: fleet replay + click-through engine detail
+- Test bench: manual predict + synthetic stream (labelled simulated)
+  
